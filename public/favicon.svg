@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Background -->
+  <rect width="64" height="64" rx="12" fill="#ffffff"/>
+  <!-- Letter N in Tailwind blue-600 (#2563eb) -->
+  <path fill="#2563eb" d="M20 48V16h6.5l17 21.5V16H52v32h-6.5l-17-21.5V48z"/>
+</svg>
+
+
