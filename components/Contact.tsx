@@ -87,8 +87,8 @@ const Contact: React.FC = () => {
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-primary-600 to-blue-600 mx-auto mb-8"></div>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            I'm always interested in new opportunities and exciting projects. 
-            Let's discuss how I can help bring your ideas to life.
+            I&#39;m always interested in new opportunities and exciting projects. 
+            Let&#39;s discuss how I can help bring your ideas to life.
           </p>
         </motion.div>
 
@@ -101,7 +101,7 @@ const Contact: React.FC = () => {
             viewport={{ once: true }}
           >
             <h3 className="text-2xl font-bold text-gray-900 mb-8">
-              Let's Connect
+              Let&#39;s Connect
             </h3>
             
             <div className="space-y-6 mb-8">
@@ -218,7 +218,7 @@ const Contact: React.FC = () => {
                     onChange={handleChange}
                     required
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200"
-                    placeholder="What's this about?"
+                    placeholder="What&#39;s this about?"
                   />
                 </div>
 

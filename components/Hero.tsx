@@ -24,7 +24,7 @@ const Hero: React.FC = () => {
             transition={{ duration: 0.8, delay: 0.1 }}
             className="text-2xl md:text-3xl lg:text-4xl font-semibold text-gray-700 mb-4"
           >
-            Hi, I'm <span className="gradient-text">Nechama</span>
+            Hi, I&#39;m <span className="gradient-text">Nechama</span>
           </motion.h2>
 
           {/* Main heading */}
