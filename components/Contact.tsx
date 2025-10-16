@@ -59,12 +59,6 @@ const Contact: React.FC = () => {
       link: "mailto:nechamasho@gmail.com"
     },
     {
-      icon: <Phone className="w-6 h-6 text-primary-600" />,
-      title: "Phone",
-      value: "+1 (555) 123-4567",
-      link: "tel:+15551234567"
-    },
-    {
       icon: <MapPin className="w-6 h-6 text-primary-600" />,
       title: "Location",
       value: "Israel, Tel Aviv",
