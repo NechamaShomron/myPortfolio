@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
-import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react'
+import { Mail, Phone, MapPin, Send, CheckCircle, Github, Linkedin } from 'lucide-react'
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -62,7 +62,7 @@ const Contact: React.FC = () => {
       icon: <MapPin className="w-6 h-6 text-primary-600" />,
       title: "Location",
       value: "Israel, Tel Aviv",
-      link: "#"
+      link: "https://maps.google.com/?q=Israel,%20Tel%20Aviv"
     }
   ]
 
@@ -108,7 +108,12 @@ const Contact: React.FC = () => {
                   viewport={{ once: true }}
                   className="flex items-center p-4 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors duration-200"
                 >
-                  <div className="flex items-center w-full">
+                  <a
+                    href={info.link}
+                    className="flex items-center w-full"
+                    target={info.link.startsWith('mailto:') ? '_self' : '_blank'}
+                    rel={info.link.startsWith('http') ? 'noopener noreferrer' : undefined}
+                  >
                     <div className="mr-4">
                       {info.icon}
                     </div>
@@ -116,9 +121,38 @@ const Contact: React.FC = () => {
                       <h4 className="font-semibold text-gray-900">{info.title}</h4>
                       <p className="text-gray-600">{info.value}</p>
                     </div>
-                  </div>
+                  </a>
                 </motion.div>
               ))}
+            </div>
+
+            {/* Social Links */}
+            <div className="mb-8">
+              <h4 className="text-lg font-semibold text-gray-900 mb-4">Connect with me</h4>
+              <div className="flex space-x-4">
+                <motion.a
+                  href="https://github.com/NechamaShomron"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="flex items-center space-x-2 px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-lg transition-colors duration-200"
+                >
+                  <Github className="w-5 h-5 text-gray-700" />
+                  <span className="text-gray-700 font-medium">GitHub</span>
+                </motion.a>
+                <motion.a
+                  href="https://www.linkedin.com/in/nechama-shomron-5a76ab168/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="flex items-center space-x-2 px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-lg transition-colors duration-200"
+                >
+                  <Linkedin className="w-5 h-5 text-gray-700" />
+                  <span className="text-gray-700 font-medium">LinkedIn</span>
+                </motion.a>
+              </div>
             </div>
 
             <div className="bg-gradient-to-r from-primary-50 to-blue-50 rounded-2xl p-6">
@@ -127,8 +161,6 @@ const Contact: React.FC = () => {
               </h4>
               <ul className="space-y-2 text-gray-700">
                 <li>• Full-time positions</li>
-                <li>• Contract work</li>
-                <li>• Freelance projects</li>
               </ul>
             </div>
           </motion.div>
